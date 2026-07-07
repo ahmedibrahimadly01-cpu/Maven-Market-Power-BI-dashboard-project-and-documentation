@@ -26,11 +26,11 @@
         "!gdown --folder https://drive.google.com/drive/folders/1dEv6gPwPahUfFFRYYxvp3i5M34D7KI9J -O /content/rml22_download"
       ],
       "metadata": {
-        "id": "R0T1Udu9ML7V",
-        "outputId": "f049f50c-2b00-419b-f21d-e063f55aeaee",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "R0T1Udu9ML7V",
+        "outputId": "f049f50c-2b00-419b-f21d-e063f55aeaee"
       },
       "execution_count": 1,
       "outputs": [
@@ -75,11 +75,11 @@
         "        print(f\"{full} - {os.path.getsize(full)/1e6:.1f} MB\")"
       ],
       "metadata": {
-        "id": "gX5gpSQ0MOyW",
-        "outputId": "f9db6daa-7002-45cb-bce8-d15ca78f20ed",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "gX5gpSQ0MOyW",
+        "outputId": "f9db6daa-7002-45cb-bce8-d15ca78f20ed"
       },
       "execution_count": 2,
       "outputs": [
@@ -102,11 +102,11 @@
         "print(header)"
       ],
       "metadata": {
-        "id": "zPJXUbH1MVot",
-        "outputId": "71c62554-af48-4da1-ab41-64cb69cfd766",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "zPJXUbH1MVot",
+        "outputId": "71c62554-af48-4da1-ab41-64cb69cfd766"
       },
       "execution_count": 3,
       "outputs": [
@@ -135,11 +135,11 @@
         "    print(\"Example value shape:\", data[keys[0]].shape)"
       ],
       "metadata": {
-        "id": "yKAWbymzMiYC",
-        "outputId": "a142f20b-8330-45c4-80cc-a490c978637a",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "yKAWbymzMiYC",
+        "outputId": "a142f20b-8330-45c4-80cc-a490c978637a"
       },
       "execution_count": 4,
       "outputs": [
@@ -171,11 +171,11 @@
         "print(\"Example value shape:\", data[keys[0]].shape)"
       ],
       "metadata": {
-        "id": "kzMVX_oRMq5_",
-        "outputId": "8fe0420c-e237-4ab0-b078-f4d08ae7c16a",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "kzMVX_oRMq5_",
+        "outputId": "8fe0420c-e237-4ab0-b078-f4d08ae7c16a"
       },
       "execution_count": 8,
       "outputs": [
@@ -211,11 +211,11 @@
         "print(\"X shape:\", X.shape, \"| y shape:\", y.shape)"
       ],
       "metadata": {
-        "id": "u0G2Jjf-M0Ij",
-        "outputId": "6d6f31e9-b2fd-4c2e-8605-50051955d1ac",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "u0G2Jjf-M0Ij",
+        "outputId": "6d6f31e9-b2fd-4c2e-8605-50051955d1ac"
       },
       "execution_count": 9,
       "outputs": [
@@ -267,11 +267,11 @@
         "print(\"Train:\", Xiq_tr.shape[0], \"Val:\", Xiq_val.shape[0], \"Test:\", Xiq_te.shape[0])"
       ],
       "metadata": {
-        "id": "AGuf_ZMgNHbN",
-        "outputId": "39e22166-751d-4903-e7ad-2547933d1725",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "AGuf_ZMgNHbN",
+        "outputId": "39e22166-751d-4903-e7ad-2547933d1725"
       },
       "execution_count": 10,
       "outputs": [
@@ -331,12 +331,12 @@
         "qsla_model.summary()"
       ],
       "metadata": {
-        "id": "YnCyh8C1NMEs",
-        "outputId": "c039f674-5e77-4f91-ffa9-497c19f1ed45",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 1000
-        }
+        },
+        "id": "YnCyh8C1NMEs",
+        "outputId": "c039f674-5e77-4f91-ffa9-497c19f1ed45"
       },
       "execution_count": 15,
       "outputs": [
@@ -735,12 +735,12 @@
         "plt.show()"
       ],
       "metadata": {
-        "id": "l9YqwHmdDVH1",
-        "outputId": "57701011-67a0-405f-fcb6-373bb75cc51b",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 504
-        }
+        },
+        "id": "l9YqwHmdDVH1",
+        "outputId": "57701011-67a0-405f-fcb6-373bb75cc51b"
       },
       "execution_count": 18,
       "outputs": [
@@ -765,9 +765,348 @@
     },
     {
       "cell_type": "code",
+      "source": [
+        "import tensorflow as tf\n",
+        "print(\"GPUs available:\", tf.config.list_physical_devices('GPU'))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NzutZbO_Kp4n",
+        "outputId": "4a8e33e6-f46e-4720-ef6d-c090fa528e47"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "GPUs available: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install -q gdown\n",
+        "!gdown --folder https://drive.google.com/drive/folders/1dEv6gPwPahUfFFRYYxvp3i5M34D7KI9J -O /content/rml22_download"
+      ],
+      "metadata": {
+        "id": "u8jj5VSgMxIu",
+        "outputId": "aafb7555-e0dc-4782-e1eb-c252bc60d57c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Retrieving folder contents\n",
+            "Processing file 1J7ThxTwO7nf-esLBJrV0h5w5w0cCPC8- Podcast.wav\n",
+            "Processing file 1UH2nBl0Gvc0do7SW4aqcNJMtq4miLcoSaoQs5z-c0x0 ReadMe\n",
+            "Processing file 1wrqnanHbmdFiP3DqaBjSVcBxoQ0nzD-a RML22\n",
+            "Retrieving folder contents completed\n",
+            "Building directory structure\n",
+            "Building directory structure completed\n",
+            "Downloading...\n",
+            "From (original): https://drive.google.com/uc?id=1J7ThxTwO7nf-esLBJrV0h5w5w0cCPC8-\n",
+            "From (redirected): https://drive.google.com/uc?id=1J7ThxTwO7nf-esLBJrV0h5w5w0cCPC8-&confirm=t&uuid=65001194-0ee0-41e3-bb60-6eff884fbac8\n",
+            "To: /content/rml22_download/Podcast.wav\n",
+            "100% 280M/280M [00:03<00:00, 90.1MB/s]\n",
+            "Downloading...\n",
+            "From (original): https://drive.google.com/uc?id=1UH2nBl0Gvc0do7SW4aqcNJMtq4miLcoSaoQs5z-c0x0\n",
+            "From (redirected): https://docs.google.com/document/d/1UH2nBl0Gvc0do7SW4aqcNJMtq4miLcoSaoQs5z-c0x0/export?format=docx\n",
+            "To: /content/rml22_download/ReadMe\n",
+            "6.59kB [00:00, 31.4MB/s]\n",
+            "Downloading...\n",
+            "From (original): https://drive.google.com/uc?id=1wrqnanHbmdFiP3DqaBjSVcBxoQ0nzD-a\n",
+            "From (redirected): https://drive.google.com/uc?id=1wrqnanHbmdFiP3DqaBjSVcBxoQ0nzD-a&confirm=t&uuid=3bf2a86e-8c2a-42ec-a6d3-64bec33a7d16\n",
+            "To: /content/rml22_download/RML22\n",
+            "100% 473M/473M [00:05<00:00, 92.2MB/s]\n",
+            "Download completed\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pickle\n",
+        "import numpy as np\n",
+        "\n",
+        "with open('/content/rml22_download/RML22', 'rb') as f:\n",
+        "    data = pickle.load(f)\n",
+        "\n",
+        "mods = sorted(list(set([k[0] for k in data.keys()])))\n",
+        "snrs = sorted(list(set([k[1] for k in data.keys()])))\n",
+        "\n",
+        "X, y = [], []\n",
+        "for mod in mods:\n",
+        "    for snr in snrs:\n",
+        "        samples = data[(mod, snr)]\n",
+        "        X.append(samples)\n",
+        "        y += [mods.index(mod)] * samples.shape[0]\n",
+        "\n",
+        "X = np.vstack(X).astype(np.float32)\n",
+        "y = np.array(y)\n",
+        "\n",
+        "I = X[:, 0, :]\n",
+        "Q = X[:, 1, :]\n",
+        "amp = np.sqrt(I**2 + Q**2)\n",
+        "phase = np.arctan2(Q, I)\n",
+        "\n",
+        "X_iq = X.transpose(0, 2, 1)\n",
+        "X_ap = np.stack([amp, phase], axis=-1)\n",
+        "X_i  = I[..., np.newaxis]\n",
+        "X_q  = Q[..., np.newaxis]\n",
+        "\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from tensorflow.keras.utils import to_categorical\n",
+        "\n",
+        "idx_train, idx_test = train_test_split(np.arange(len(y)), test_size=0.1, random_state=42, stratify=y)\n",
+        "idx_train, idx_val = train_test_split(idx_train, test_size=1/9, random_state=42, stratify=y[idx_train])\n",
+        "\n",
+        "def split(arr): return arr[idx_train], arr[idx_val], arr[idx_test]\n",
+        "\n",
+        "Xiq_tr, Xiq_val, Xiq_te = split(X_iq)\n",
+        "Xap_tr, Xap_val, Xap_te = split(X_ap)\n",
+        "Xi_tr, Xi_val, Xi_te   = split(X_i)\n",
+        "Xq_tr, Xq_val, Xq_te   = split(X_q)\n",
+        "\n",
+        "y_cat = to_categorical(y, num_classes=len(mods))\n",
+        "y_tr, y_val, y_te = split(y_cat)\n",
+        "\n",
+        "print(\"Loaded. Train:\", Xiq_tr.shape[0], \"Val:\", Xiq_val.shape[0], \"Test:\", Xiq_te.shape[0])"
+      ],
+      "metadata": {
+        "id": "wySaWriYNDDR",
+        "outputId": "10c79242-e477-49c4-b1ac-dd280c499888",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Loaded. Train: 369600 Val: 46200 Test: 46200\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from tensorflow.keras import layers, Input, Model\n",
+        "\n",
+        "def build_qsla(filters=80, lstm_units=80):\n",
+        "    def conv_block(inp, f=filters, kernel=3):\n",
+        "        x = layers.Conv1D(f, kernel, padding='same')(inp)\n",
+        "        x = layers.BatchNormalization()(x)\n",
+        "        x = layers.ReLU()(x)\n",
+        "        return x\n",
+        "\n",
+        "    inp_iq = Input(shape=(128, 2))\n",
+        "    inp_ap = Input(shape=(128, 2))\n",
+        "    inp_i  = Input(shape=(128, 1))\n",
+        "    inp_q  = Input(shape=(128, 1))\n",
+        "\n",
+        "    conv1 = conv_block(inp_iq)\n",
+        "    conv2 = conv_block(inp_ap)\n",
+        "    conv3 = conv_block(inp_i)\n",
+        "    conv4 = conv_block(inp_q)\n",
+        "\n",
+        "    iq_fused = layers.Concatenate()([conv3, conv4])\n",
+        "    conv5 = conv_block(iq_fused, kernel=1)\n",
+        "\n",
+        "    fused = layers.Concatenate()([conv1, conv2, conv5])\n",
+        "    x = conv_block(fused)\n",
+        "    x = layers.MaxPooling1D(pool_size=3, strides=3)(x)\n",
+        "    x = conv_block(x)\n",
+        "\n",
+        "    x = layers.Bidirectional(layers.LSTM(lstm_units, activation='tanh', return_sequences=True))(x)\n",
+        "    attn_scores = layers.Dense(1)(x)\n",
+        "    attn_weights = layers.Softmax(axis=1)(attn_scores)\n",
+        "    x = layers.Multiply()([x, attn_weights])\n",
+        "    x = layers.Lambda(lambda t: tf.reduce_sum(t, axis=1))(x)\n",
+        "\n",
+        "    x = layers.Dropout(0.5)(x)\n",
+        "    x = layers.Flatten()(x)\n",
+        "    out = layers.Dense(len(mods), activation='softmax',\n",
+        "                        kernel_regularizer=tf.keras.regularizers.l2(0.001))(x)\n",
+        "\n",
+        "    return Model(inputs=[inp_iq, inp_ap, inp_i, inp_q], outputs=out)\n",
+        "\n",
+        "print(\"Model builder ready.\")"
+      ],
+      "metadata": {
+        "id": "nwN5ElqtNZBE",
+        "outputId": "34002916-e4c0-404d-c261-ddd6cba2c1fb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Model builder ready.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from tensorflow.keras.optimizers import Adam\n",
+        "from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping\n",
+        "\n",
+        "# CHANGED PARAMETERS vs Task 1: lower learning rate, smaller batch size\n",
+        "qsla_v2 = build_qsla(filters=80, lstm_units=80)\n",
+        "qsla_v2.compile(optimizer=Adam(learning_rate=0.2),   # was 0.001\n",
+        "                 loss='categorical_crossentropy',\n",
+        "                 metrics=['accuracy'])\n",
+        "\n",
+        "callbacks = [\n",
+        "    ReduceLROnPlateau(monitor='val_loss', factor=0.4, patience=5),\n",
+        "    EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True),\n",
+        "]\n",
+        "\n",
+        "history_v2 = qsla_v2.fit(\n",
+        "    [Xiq_tr, Xap_tr, Xi_tr, Xq_tr], y_tr,\n",
+        "    validation_data=([Xiq_val, Xap_val, Xi_val, Xq_val], y_val),\n",
+        "    epochs=25,\n",
+        "    batch_size=512,   # was 1024\n",
+        "    callbacks=callbacks\n",
+        ")\n",
+        "\n",
+        "test_loss_v2, test_acc_v2 = qsla_v2.evaluate([Xiq_te, Xap_te, Xi_te, Xq_te], y_te)\n",
+        "print(f\"\\nTask 2 (changed params) test accuracy: {test_acc_v2*100:.2f}%\")\n",
+        "print(f\"Task 1 (original params) test accuracy: 66.11%   <- for comparison\")"
+      ],
+      "metadata": {
+        "id": "1wAWuJZPNgTo",
+        "outputId": "ed73620a-41fd-4da4-d8ba-3993ae20420d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Epoch 1/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m65s\u001b[0m 70ms/step - accuracy: 0.2106 - loss: 2.2088 - val_accuracy: 0.1237 - val_loss: 2.3389 - learning_rate: 0.2000\n",
+            "Epoch 2/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m51s\u001b[0m 71ms/step - accuracy: 0.2455 - loss: 2.0628 - val_accuracy: 0.1914 - val_loss: 2.2180 - learning_rate: 0.2000\n",
+            "Epoch 3/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m52s\u001b[0m 73ms/step - accuracy: 0.1919 - loss: 2.2167 - val_accuracy: 0.1786 - val_loss: 2.2070 - learning_rate: 0.2000\n",
+            "Epoch 4/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m52s\u001b[0m 72ms/step - accuracy: 0.2120 - loss: 2.1601 - val_accuracy: 0.2117 - val_loss: 2.2403 - learning_rate: 0.2000\n",
+            "Epoch 5/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m52s\u001b[0m 71ms/step - accuracy: 0.2201 - loss: 2.1187 - val_accuracy: 0.2898 - val_loss: 1.9427 - learning_rate: 0.2000\n",
+            "Epoch 6/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m51s\u001b[0m 71ms/step - accuracy: 0.2712 - loss: 2.0023 - val_accuracy: 0.3339 - val_loss: 1.9108 - learning_rate: 0.2000\n",
+            "Epoch 7/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m51s\u001b[0m 70ms/step - accuracy: 0.2971 - loss: 1.9393 - val_accuracy: 0.3273 - val_loss: 1.8498 - learning_rate: 0.2000\n",
+            "Epoch 8/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m51s\u001b[0m 70ms/step - accuracy: 0.3083 - loss: 1.9119 - val_accuracy: 0.3241 - val_loss: 1.8092 - learning_rate: 0.2000\n",
+            "Epoch 9/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.3226 - loss: 1.8692 - val_accuracy: 0.2786 - val_loss: 1.9837 - learning_rate: 0.2000\n",
+            "Epoch 10/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3227 - loss: 1.8627 - val_accuracy: 0.2706 - val_loss: 2.0708 - learning_rate: 0.2000\n",
+            "Epoch 11/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.3258 - loss: 1.8469 - val_accuracy: 0.3530 - val_loss: 1.7314 - learning_rate: 0.2000\n",
+            "Epoch 12/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m51s\u001b[0m 70ms/step - accuracy: 0.3139 - loss: 1.8747 - val_accuracy: 0.3084 - val_loss: 1.8200 - learning_rate: 0.2000\n",
+            "Epoch 13/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.3002 - loss: 1.9120 - val_accuracy: 0.2285 - val_loss: 2.2198 - learning_rate: 0.2000\n",
+            "Epoch 14/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3138 - loss: 1.8749 - val_accuracy: 0.3906 - val_loss: 1.7009 - learning_rate: 0.2000\n",
+            "Epoch 15/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 69ms/step - accuracy: 0.3269 - loss: 1.8492 - val_accuracy: 0.3674 - val_loss: 1.7305 - learning_rate: 0.2000\n",
+            "Epoch 16/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 69ms/step - accuracy: 0.3344 - loss: 1.8292 - val_accuracy: 0.3578 - val_loss: 1.6876 - learning_rate: 0.2000\n",
+            "Epoch 17/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3394 - loss: 1.8057 - val_accuracy: 0.3567 - val_loss: 1.6571 - learning_rate: 0.2000\n",
+            "Epoch 18/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3381 - loss: 1.7926 - val_accuracy: 0.3659 - val_loss: 1.6671 - learning_rate: 0.2000\n",
+            "Epoch 19/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.3306 - loss: 1.8229 - val_accuracy: 0.3721 - val_loss: 1.7125 - learning_rate: 0.2000\n",
+            "Epoch 20/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.2881 - loss: 1.9500 - val_accuracy: 0.3225 - val_loss: 1.8659 - learning_rate: 0.2000\n",
+            "Epoch 21/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3086 - loss: 1.9025 - val_accuracy: 0.3458 - val_loss: 1.7716 - learning_rate: 0.2000\n",
+            "Epoch 22/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3075 - loss: 1.8835 - val_accuracy: 0.2704 - val_loss: 1.9579 - learning_rate: 0.2000\n",
+            "Epoch 23/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3306 - loss: 1.7861 - val_accuracy: 0.3986 - val_loss: 1.6305 - learning_rate: 0.0800\n",
+            "Epoch 24/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m50s\u001b[0m 69ms/step - accuracy: 0.3432 - loss: 1.7471 - val_accuracy: 0.4028 - val_loss: 1.5709 - learning_rate: 0.0800\n",
+            "Epoch 25/25\n",
+            "\u001b[1m722/722\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m49s\u001b[0m 68ms/step - accuracy: 0.3523 - loss: 1.7229 - val_accuracy: 0.3972 - val_loss: 1.5662 - learning_rate: 0.0800\n",
+            "\u001b[1m1444/1444\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m10s\u001b[0m 7ms/step - accuracy: 0.3960 - loss: 1.5692\n",
+            "\n",
+            "Task 2 (changed params) test accuracy: 39.60%\n",
+            "Task 1 (original params) test accuracy: 66.11%   <- for comparison\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "qsla_v2 = build_qsla(filters=80, lstm_units=80)\n",
+        "qsla_v2.compile(optimizer=Adam(learning_rate=0.2),\n",
+        "                 loss='categorical_crossentropy',\n",
+        "                 metrics=['accuracy'])\n",
+        "\n",
+        "history_v2 = qsla_v2.fit(\n",
+        "    [Xiq_tr, Xap_tr, Xi_tr, Xq_tr], y_tr,\n",
+        "    validation_data=([Xiq_val, Xap_val, Xi_val, Xq_val], y_val),\n",
+        "    epochs=25,\n",
+        "    batch_size=512,\n",
+        "    callbacks=callbacks\n",
+        ")\n",
+        "\n",
+        "test_loss_v2, test_acc_v2 = qsla_v2.evaluate([Xiq_te, Xap_te, Xi_te, Xq_te], y_te)\n",
+        "print(f\"\\nLR=0.2 test accuracy: {test_acc_v2*100:.2f}%\")"
+      ],
+      "metadata": {
+        "id": "xBSdTzbdNmLo",
+        "outputId": "6d073412-6d1d-4914-aa1d-115b79210d7b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Epoch 1/25\n",
+            "\u001b[1m252/722\u001b[0m \u001b[32m━━━━━━\u001b[0m\u001b[37m━━━━━━━━━━━━━━\u001b[0m \u001b[1m31s\u001b[0m 68ms/step - accuracy: 0.1594 - loss: 2.9863"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
       "source": [],
       "metadata": {
-        "id": "NzutZbO_Kp4n"
+        "id": "UhUp2ij8SmLd"
       },
       "execution_count": null,
       "outputs": []
